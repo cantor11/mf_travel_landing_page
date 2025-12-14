@@ -34,7 +34,7 @@ export default function Header() {
             <img src="/assets/mf_travel_logo.webp" alt="MF Travel Logo" className="h-11 w-auto" />
           </a>
 
-          <div className="hidden md:flex items-center gap-6 flex-wrap">
+          <div className="hidden md:flex items-center gap-8 flex-wrap">
             {navLinks.map((link) => (
               <button
                 key={link.href}

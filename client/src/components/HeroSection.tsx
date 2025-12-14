@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { SiWhatsapp, SiInstagram} from "react-icons/si";
-import { Plane, MapPin, Mountain, Palmtree } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -8,7 +7,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight" data-testid="text-hero-title">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight lg:leading-tight" data-testid="text-hero-title">
               Planeamos tu viaje para que vivas{" "}
               <span className="text-primary">experiencias inolvidables</span>
             </h1>
@@ -38,18 +37,16 @@ export default function HeroSection() {
                 className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center"
                 data-testid="visual-destination-1"
               >
-                <div className="text-center p-4">
+                <div className="text-center">
                   <img src="/assets/paris.webp" alt="París" className="h-full w-full object-cover rounded-lg" />
-                  <span className="text-sm font-medium text-foreground">París</span>
                 </div>
               </div>
               <div 
-                className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#0099A5]/20 to-[#0099A5]/40 flex items-center justify-center"
+                className="h-46 rounded-lg bg-gradient-to-br from-[#0099A5]/20 to-[#0099A5]/40 flex items-center justify-center"
                 data-testid="visual-destination-2"
               >
-                <div className="text-center p-4">
+                <div className="text-center">
                   <img src="/assets/machu-picchu.webp" alt="Machu Picchu" className="h-full w-full object-cover rounded-lg" />
-                  <span className="text-sm font-medium text-foreground">Machu Picchu</span>
                 </div>
               </div>
             </div>
@@ -58,18 +55,16 @@ export default function HeroSection() {
                 className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#0043A5]/20 to-[#0043A5]/40 flex items-center justify-center"
                 data-testid="visual-destination-3"
               >
-                <div className="text-center p-4">
+                <div className="text-center">
                   <img src="/assets/roma.webp" alt="Roma" className="h-full w-full object-cover rounded-lg" />
-                  <span className="text-sm font-medium text-foreground">Roma</span>
                 </div>
               </div>
               <div 
                 className="aspect-square rounded-lg bg-gradient-to-br from-[#21A4C0]/20 to-[#21A4C0]/40 flex items-center justify-center"
                 data-testid="visual-destination-4"
               >
-                <div className="text-center p-4">
+                <div className="text-center">
                   <img src="/assets/cancun.webp" alt="Cancún" className="h-full w-full object-cover rounded-lg" />
-                  <span className="text-sm font-medium text-foreground">Cancún</span>
                 </div>
               </div>
             </div>
