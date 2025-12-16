@@ -1,9 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { SiWhatsapp, SiInstagram} from "react-icons/si";
+import { SiWhatsapp, SiInstagram } from "react-icons/si";
 
 export default function HeroSection() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-background">
+    <section
+      className="py-16 md:py-24 lg:py-32 bg-background"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.5)), url(/assets/clouds.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
@@ -12,7 +20,7 @@ export default function HeroSection() {
               <span className="text-primary">experiencias inolvidables</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-hero-subtitle">
-              Asesoría personalizada, precios accesibles y acompañamiento antes, durante y después de tu viaje. 
+              Asesoría personalizada, precios accesibles y acompañamiento antes, durante y después de tu viaje.
               Hacemos que viajar sea fácil y emocionante.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -33,7 +41,7 @@ export default function HeroSection() {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div 
+              <div
                 className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center"
                 data-testid="visual-destination-1"
               >
@@ -41,7 +49,7 @@ export default function HeroSection() {
                   <img src="/assets/paris.webp" alt="París" className="h-full w-full object-cover rounded-lg" />
                 </div>
               </div>
-              <div 
+              <div
                 className="h-46 rounded-lg bg-gradient-to-br from-[#0099A5]/20 to-[#0099A5]/40 flex items-center justify-center"
                 data-testid="visual-destination-2"
               >
@@ -51,7 +59,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="space-y-4 pt-8">
-              <div 
+              <div
                 className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#0043A5]/20 to-[#0043A5]/40 flex items-center justify-center"
                 data-testid="visual-destination-3"
               >
@@ -59,7 +67,7 @@ export default function HeroSection() {
                   <img src="/assets/roma.webp" alt="Roma" className="h-full w-full object-cover rounded-lg" />
                 </div>
               </div>
-              <div 
+              <div
                 className="aspect-square rounded-lg bg-gradient-to-br from-[#21A4C0]/20 to-[#21A4C0]/40 flex items-center justify-center"
                 data-testid="visual-destination-4"
               >

@@ -21,14 +21,14 @@ const values = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-muted/30">
+    <section id="about" className="py-16 md:py-24 bg-colorSecondary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4" data-testid="text-about-title">
             Viajar es más fácil cuando alguien te acompaña
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto" data-testid="text-about-description">
-            En MF Travel creemos que cada viaje debe ser una experiencia única y memorable. 
+            En MF Travel creemos que cada viaje debe ser una experiencia única y memorable.
             Por eso, nos dedicamos a conocerte y entender qué tipo de aventura buscas.
           </p>
         </div>

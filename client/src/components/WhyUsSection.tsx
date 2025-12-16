@@ -10,7 +10,7 @@ const reasons = [
 
 export default function WhyUsSection() {
   return (
-    <section id="why-us" className="py-16 md:py-24 bg-muted/30">
+    <section id="why-us" className="py-16 md:py-24 bg-colorSecondary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -18,7 +18,7 @@ export default function WhyUsSection() {
               ¿Por qué elegirnos?
             </h2>
             <p className="text-muted-foreground mb-8" data-testid="text-whyus-description">
-              En MF Travel no solo planificamos viajes, creamos experiencias que recordarás para siempre. 
+              En MF Travel no solo planificamos viajes, creamos experiencias que recordarás para siempre.
               Nuestro compromiso es hacer que cada viaje sea único y especial.
             </p>
             <ul className="space-y-4">
@@ -35,13 +35,13 @@ export default function WhyUsSection() {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div className="aspect-square rounded-lg bg-gradient-to-br from-primary/30 to-[#4ED7CF]/50 flex items-center justify-center">
+              <div className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-[#4ED7CF]/70 flex items-center justify-center">
                 <div className="text-center">
                   <span className="text-3xl font-bold text-foreground">100+</span>
                   <p className="text-sm text-muted-foreground">Viajeros felices</p>
                 </div>
               </div>
-              <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#0043A5]/30 to-[#21A4C0]/50 flex items-center justify-center">
+              <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#0043A5]/20 to-[#21A4C0]/70 flex items-center justify-center">
                 <div className="text-center">
                   <span className="text-3xl font-bold text-foreground">50+</span>
                   <p className="text-sm text-muted-foreground">Destinos</p>
@@ -49,13 +49,13 @@ export default function WhyUsSection() {
               </div>
             </div>
             <div className="space-y-4 pt-8">
-              <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#E76F00]/20 to-[#F5C316]/40 flex items-center justify-center">
+              <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-[#E76F00]/20 to-[#F5C316]/70 flex items-center justify-center">
                 <div className="text-center">
                   <span className="text-3xl font-bold text-foreground">5</span>
                   <p className="text-sm text-muted-foreground">Años de experiencia</p>
                 </div>
               </div>
-              <div className="aspect-square rounded-lg bg-gradient-to-br from-[#0099A5]/30 to-primary/50 flex items-center justify-center">
+              <div className="aspect-square rounded-lg bg-gradient-to-br from-[#0099A5]/20 to-primary/70 flex items-center justify-center">
                 <div className="text-center">
                   <span className="text-3xl font-bold text-foreground">24/7</span>
                   <p className="text-sm text-muted-foreground">Soporte</p>

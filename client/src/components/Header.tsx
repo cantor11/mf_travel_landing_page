@@ -26,8 +26,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navegación principal">
         <div className="flex items-center justify-between gap-4 h-16">
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="flex items-center text-xl font-bold text-foreground flex-shrink-0"
             data-testid="link-logo"
           >
