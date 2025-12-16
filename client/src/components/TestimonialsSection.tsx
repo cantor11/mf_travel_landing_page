@@ -1,37 +1,104 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Check } from "lucide-react";
 
-// todo: remove mock functionality
 const testimonials = [
   {
-    name: "María González",
-    tripType: "Viaje familiar a Europa",
-    rating: 5,
-    review: "Increíble experiencia. MF Travel se encargó de todo y pudimos disfrutar en familia sin preocupaciones. Los hoteles fueron perfectos para los niños.",
+    name: "Manuel Lisboa",
+    avatar: "ML",
+    messages: [
+      {
+        text: "Me parecieron las mejores personas capacitadas para este proceso y todo lo que el mismo conlleva.",
+        time: "10:15 a.m."
+      },
+      {
+        text: "La experiencia fue excelente, rápido. Todas las necesidades fueron completamente cumplidas.",
+        time: "10:16 a.m."
+      }
+    ]
   },
   {
-    name: "Carlos Rodríguez",
-    tripType: "Mochilero por Sudamérica",
-    rating: 5,
-    review: "La mejor decisión que tomé fue contactar a MF Travel. Me ayudaron a armar un itinerario económico pero completo. El acompañamiento durante el viaje fue invaluable.",
+    name: "Carlos Toro",
+    avatar: "CT",
+    messages: [
+      {
+        text: "Sastifactoria, excelente atención e inmediata respuesta por parte de la agente Mariángel Fernández. Atenta y muy dedicada.",
+        time: "2:09 p.m."
+      },
+      {
+        text: "Los aspectos más importantes: Atención, puntualidad y responsabilidad.",
+        time: "2:10 p.m."
+      }
+    ]
   },
   {
-    name: "Ana Martínez",
-    tripType: "Luna de miel en París",
-    rating: 5,
-    review: "Planificaron cada detalle de nuestra luna de miel. Restaurantes, tours privados y hoteles de ensueño. Superó todas nuestras expectativas.",
+    name: "Terry Atomy",
+    avatar: "TA",
+    messages: [
+      {
+        text: "Me generó confianza y su capacidad de respuesta fue inmediata.",
+        time: "11:00 a.m."
+      },
+      {
+        text: "La experiencia fue cómoda, acogedora y segura de inicio a fin. Muy atentos en mis cambios de itinerario.",
+        time: "11:02 a.m."
+      }
+    ]
+  },
+  {
+    name: "Carlos Trujillo",
+    avatar: "CT",
+    messages: [
+      {
+        text: "Me hablaron muy bien de ustedes y por eso adquirí el servicio.",
+        time: "12:38 p.m."
+      },
+      {
+        text: "Muy bien, son cumplidores y responsables. Super pendiente de todo y muy bien atendido.",
+        time: "12:39 p.m."
+      }
+    ]
+  },
+  {
+    name: "Karina Vecina",
+    avatar: "KV",
+    messages: [
+      {
+        text: "Gestionan todo rápido. La experiencia fue excelente, siempre cumplieron.",
+        time: "1:47 p.m."
+      },
+      {
+        text: "Deben seguir con la misma eficiencia y amabilidad. Ser amables, atentos y que gestionen.",
+        time: "1:48 p.m."
+      }
+    ]
+  },
+  {
+    name: "Anderson",
+    avatar: "AR",
+    messages: [
+      {
+        text: "Deposito toda mi confianza en ustedes.",
+        time: "10:59 p.m."
+      },
+      {
+        text: "Gracias por estar, quiero tomar mis vacaciones gracias a ustedes. 🙏",
+        time: "11:00 p.m."
+      }
+    ]
   },
 ];
 
-function StarRating({ rating }: { rating: number }) {
+function WhatsAppMessage({ text, time }: { text: string; time: string }) {
   return (
-    <div className="flex gap-0.5">
-      {[...Array(5)].map((_, i) => (
-        <Star
-          key={i}
-          className={`h-4 w-4 ${i < rating ? "text-[#F5C316] fill-[#F5C316]" : "text-muted"}`}
-        />
-      ))}
+    <div className="flex items-end gap-2 mb-3">
+      <div className="max-w-[85%] bg-white rounded-lg rounded-bl-none px-4 py-2 shadow-sm border border-gray-200">
+        <p className="text-sm text-gray-800 leading-relaxed">{text}</p>
+        <div className="flex items-center justify-end gap-1 mt-1">
+          <span className="text-[10px] text-gray-500">{time}</span>
+          <Check className="h-3 w-3 text-blue-500" />
+          <Check className="h-3 w-3 text-blue-500 -ml-2" />
+        </div>
+      </div>
     </div>
   );
 }
@@ -49,19 +116,30 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card key={testimonial.name} data-testid={`card-testimonial-${index}`}>
-              <CardContent className="pt-6 pb-6">
-                <StarRating rating={testimonial.rating} />
-                <p className="text-sm text-muted-foreground mt-4 mb-4 italic">
-                  "{testimonial.review}"
-                </p>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-xs text-muted-foreground">{testimonial.tripType}</p>
+            <Card key={`${testimonial.name}-${index}`} data-testid={`card-testimonial-${index}`} className="overflow-hidden flex flex-col">
+              {/* Header estilo WhatsApp */}
+              <div className="bg-[#00A99E] px-4 py-3 flex items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-white/90 flex items-center justify-center font-semibold text-[#00A99E] text-sm">
+                  {testimonial.avatar}
                 </div>
-              </CardContent>
+                <div>
+                  <p className="font-semibold text-white text-sm">{testimonial.name}</p>
+                  <p className="text-xs text-white/80">Viajero MF Travel</p>
+                </div>
+              </div>
+
+              {/* Mensajes estilo WhatsApp - ahora flex-1 para llenar todo el espacio */}
+              <div className="bg-[#E5DDD5] p-4 flex-1">
+                {testimonial.messages.map((message, msgIndex) => (
+                  <WhatsAppMessage
+                    key={msgIndex}
+                    text={message.text}
+                    time={message.time}
+                  />
+                ))}
+              </div>
             </Card>
           ))}
         </div>
