@@ -6,6 +6,7 @@ import DestinationsSection from "@/components/DestinationsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import FinalCTASection from "@/components/FinalCTASection";
+import ContactUsSection from "@/components/ContactUsSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <DestinationsSection />
         <TestimonialsSection />
         <WhyUsSection />
+        <ContactUsSection />
         <FinalCTASection />
       </main>
       <Footer />

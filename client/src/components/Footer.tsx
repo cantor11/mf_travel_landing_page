@@ -93,7 +93,10 @@ export default function Footer() {
             © {new Date().getFullYear()} MF Travel. Todos los derechos reservados.
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            La información proporcionada será utilizada únicamente para contactarte sobre nuestros servicios de viajes.
+            Los datos proporcionados a través de este sitio web son utilizados única y exclusivamente
+            con fines de contacto comercial y profesional con MF Travel. No compartimos tu información
+            con terceros. Al enviar el formulario, aceptas que procesemos tus datos para responder
+            a tu consulta de viaje.
           </p>
         </div>
       </div>
